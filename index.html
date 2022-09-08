@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Scroll Page Down</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <div class="side" id="side1">
+            <video src="./birds.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2" >
+            <video src="./birds.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+    </section>
+
+    <div class="content">
+        <h2>
+            Split Scroll Page Down
+        </h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis enim mollitia, <br>
+                eaque quod iusto cupiditate incidunt itaque libero quas sunt vitae, nobis aliquid totam veritatis quis,<br>
+                 earum obcaecati nulla sit quam nesciunt delectus minus? Soluta, harum consequuntur doloribus deleniti obcaecati autem <br>
+                 accusamus quae nulla voluptatum excepturi dignissimos! Placeat dicta culpa fugit? Suscipit quam explicabo,<br>
+                  impedit in recusandae eligendi quas autem qui? Dolores eos, recusandae magni odio inventore placeat fuga. <br></p>
+        </div>
+
+        <script>
+            let side1 = document.getElementById('side1');
+            let side2 = document.getElementById('side2');
+
+            window.addEventListener('scroll', function(){
+                side1.style.left = -window.pageYOffset+ 'px';
+                side2.style.left = window.pageYOffset +'px';
+            })
+        </script>
+</body>
+</html>
